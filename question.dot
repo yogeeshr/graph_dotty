@@ -1,0 +1,5 @@
+digraph hurray {
+	 start -> question
+     question -> "to be";
+     question -> "not to be";
+ }
