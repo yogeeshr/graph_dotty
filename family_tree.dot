@@ -42,7 +42,7 @@ digraph family_tree {
           # --
 
           node [shape=record, color=Violet];
-          edge [shape=record, color=Violet, style=dashed];
+          edge [shape=record, color=Violet];
 
           structkrrs [label="<krrs> K R Ramachandra Shashtri | <shar> Sharadhamma"];
 
@@ -53,7 +53,7 @@ digraph family_tree {
           # --
 
           node [shape=record, color=DarkGreen];
-          edge [shape=record, color=DarkGreen, style=dashed];
+          edge [shape=record, color=DarkGreen];
 
           structhv [label="<hv> Venkatasubbiah H V | <su> Sumitramma"];
 
@@ -82,7 +82,7 @@ digraph family_tree {
      #subgraph cluster_2 {
 
           node [shape=record, color=Skyblue];
-          edge [shape=record, color=Skyblue, style=dashed];
+          edge [shape=record, color=Skyblue];
 
           structmss [label="<mss> Shanthalakshamma M S | <tks> Suryanarayan Rao T K"];
 
@@ -118,7 +118,7 @@ digraph family_tree {
      #subgraph cluster_3 {
 
           node [shape=record, color=Orange];
-          edge [shape=record, color=Orange, style=dashed];
+          edge [shape=record, color=Orange];
 
           structsmur [label="<smur> Sridhar Murthy | <raj> Rajini"];
 
@@ -143,7 +143,7 @@ digraph family_tree {
      #subgraph cluster_4 {
 
           node [shape=record, color=Maroon];
-          edge [shape=record, color=Maroon   , style=dashed];
+          edge [shape=record, color=Maroon   ];
 
           structpara [label="<parb> Parashuram Bhat | <lali> Lalithamma"];
 
