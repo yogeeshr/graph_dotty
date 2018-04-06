@@ -7,7 +7,7 @@ digraph family_tree {
      rankdir=LR
 
      node [shape=record, color=Blue];
-     edge [shape=record, color=Blue, style=dashed, arrowType="open"];
+     edge [shape=record, color=Blue];
 
 	# Own family
      structyogra [label="<yogr> Yogeesh R | <rav> Rashmi V"];
