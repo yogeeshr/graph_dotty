@@ -2,6 +2,10 @@
 
 digraph family_tree {
 
+     ratio="fill";
+     size="8.3,11.7!";
+     margin=0;
+
      graph [label="Family Tree", labelloc=t, fontsize=30];
 
      rankdir=LR
@@ -9,169 +13,204 @@ digraph family_tree {
      node [shape=record, color=Blue];
      edge [shape=record, color=Blue];
 
-	# Own family
-     structyogra [label="<yogr> Yogeesh R | <rav> Rashmi V"];
+     subgraph main {
 
-     structnts -> structyogra:yogr;
+     	# Own family
+          structyogra [label="<yogr> Yogeesh R | <rav> Rashmi V"];
 
-     structvp -> structyogra:rav;
+          structnts -> structyogra:yogr;
 
-     structvp -> "Rajath V";
+          structvp -> structyogra:rav;
 
-     # Dad's family
-     #subgraph cluster_1 {
+          structvp -> "Rajath V";
 
-          # --
+          # Dad's family
+          #subgraph cluster_1 {
 
-          structmmkv [label="<mmkv> Matha Mudre K Venkatachalayya ( Sampatthu ) | <vsu> Venkatasubamma"];
+               # --
 
-          structmmkv -> structhv:hv;
-          structmmkv -> "Venkataramiah H V";
-          structmmkv -> "Ananda Ramu H V";
-          structmmkv -> "Venkata Seshaiah H V";
-          structmmkv -> "Ram Rao H V";
-          structmmkv -> "Krishna Murthy H V";
-          structmmkv -> "Gopal Rao H V";
-          structmmkv -> "Anjan Kumar H V";
-          structmmkv -> "Rajalakshami";
-          structmmkv -> "Bhagyalakshami";
-          structmmkv -> "Jayalakshami";
-          structmmkv -> "Nagalakshami";
-          structmmkv -> "Varalakshmi";
+               structmmkv [label="<mmkv> Matha Mudre K Venkatachalayya ( Sampatthu ) | <vsu> Venkatasubamma"];
 
-          # --
+               structmmkv -> structhv:hv;
+               structmmkv -> "Venkataramiah H V";
+               structmmkv -> "Ananda Ramu H V";
+               structmmkv -> "Venkata Seshaiah H V";
+               structmmkv -> "Ram Rao H V";
+               structmmkv -> "Krishna Murthy H V";
+               structmmkv -> "Gopal Rao H V";
+               structmmkv -> "Anjan Kumar H V";
+               structmmkv -> "Rajalakshami";
+               structmmkv -> "Bhagyalakshami";
+               structmmkv -> "Jayalakshami";
+               structmmkv -> "Nagalakshami";
+               structmmkv -> "Varalakshmi";
 
-          node [shape=record, color=Violet];
-          edge [shape=record, color=Violet];
+               # --
 
-          structkrrs [label="<krrs> K R Ramachandra Shashtri | <shar> Sharadhamma"];
+               node [shape=record, color=Violet];
+               edge [shape=record, color=Violet];
 
-          structkrrs -> structhv:su;
-          structkrrs -> "Subramanya K R";
-          structkrrs -> "VenkataSwamy K R";
+               structkrrs [label="<krrs> K R Ramachandra Shashtri | <shar> Sharadhamma"];
 
-          # --
+               structkrrs -> structhv:su;
+               structkrrs -> "Subramanya K R";
+               structkrrs -> "VenkataSwamy K R";
 
-          node [shape=record, color=DarkGreen];
-          edge [shape=record, color=DarkGreen];
+               # --
 
-          structhv [label="<hv> Venkatasubbiah H V | <su> Sumitramma"];
+               node [shape=record, color=DarkGreen];
+               edge [shape=record, color=DarkGreen];
 
-          structhv -> structhvna:nhv;
-          structhv -> structnts:rv;
-          structhv -> structhvbabu:babuhv;
-          structhv -> structhvmuruga:murugahv;
-          structhv -> structhvshashi:shashihv;
+               structhv [label="<hv> Venkatasubbiah H V | <su> Nagarathnamma K R"];
 
-          structhvna [label="<nhv> Nagendra H V | <suh> Suhasini"];
-          structhvna -> "Adarsh Sharma";
+               structhv -> structhvna:nhv;
+               structhv -> structnts:rv;
+               structhv -> structhvbabu:babuhv;
+               structhv -> structhvmuruga:murugahv;
+               structhv -> structhvshashi:shashihv;
 
-          structhvbabu [label="<babuhv> Babu Miranda | <babunag> Nagarathna"];
-          structhvbabu -> "Harshitha";
+               structhvna [label="<nhv> Nagendra H V | <suh> Subhasini"];
+               structhvna -> "Adarsh Sharma";
 
-          structhvmuruga [label="<murugahv> Muruga | <murugashoba> Shobha"];
-          structhvmuruga -> "Harshini";
+               structhvbabu [label="<babuhv> V Babu Miranda | <babunag> Nagarathna"];
+               structhvbabu -> "Harshitha";
 
-          structhvshashi [label="<shashihv>  Shashikala V | <shashiprasanna> Prasanna J"];   
-          structhvshashi -> "Meghashree P";
-          structhvshashi -> "Chaaya P";
+               structhvmuruga [label="<murugahv> Muruga | <murugashoba> Shobha"];
+               structhvmuruga -> "Harshini";
 
-     #}
+               structhvshashi [label="<shashihv>  Shashikala V | <shashiprasanna> Prasanna J V"];   
+               structhvshashi -> "Meghashree P";
+               structhvshashi -> "Chaaya P";
 
-     # Mom's family
-     #subgraph cluster_2 {
+          #}
 
-          node [shape=record, color=Skyblue];
-          edge [shape=record, color=Skyblue];
+          # Mom's family
+          #subgraph cluster_2 {
 
-          structmss [label="<mss> Shanthalakshamma M S | <tks> Suryanarayan Rao T K"];
+               node [shape=record, color=grey];
+               edge [shape=record, color=grey];
 
-          structar [label="<arr> Aashar Raman | <prr> Pattabhi Raman"];
-          structmams [label="<mts> Mammatha T S | <sur> Suresh"];
-          structnts [label="<nts> Nagini T S | <rv> Rajendra V"];
-          structcha [label="<cts> Champaka T S | <sp> Shekar Patil"];
-          structjay [label="<jts> Jayanti T S | <pra> Prasanna"];
-          structpoor [label="<pts> Poornima T S | <km> Keshav Murthy"];
+               structmssri [label="<mssr> Srikantiah M S | <lbai> Lakshmi Bai"];
 
-          structmss -> structar:arr;
-          structmss -> structmams:mts;
-          structmss -> structnts:nts;
-          structmss -> structcha:cts;
-          structmss -> structjay:jts;
-          structmss -> structpoor:pts;
+               structmss [label="<mss> Shanthalakshamma M S | <tks> Suryanarayan Rao T K"];
 
-          structar -> "Santosh P";
-          structar -> "Sapna P";
+               structar [label="<arr> Aashar Raman | <prr> Pattabhi Raman"];
+               structmams [label="<mts> Mammatha T S | <sur> Suresh"];
+               structnts [label="<nts> Nagini T S | <rv> Rajendra V"];
+               structcha [label="<cts> Champaka T S | <sp> Shekar Patil"];
+               structjay [label="<jts> Jayanti T K | <pra> Prasanna"];
+               structpoor [label="<pts> Poornima T S | <km> Keshav Murthy"];
 
-          structmams -> "Rashmi Suresh";
-          structmams -> "Gayatri Suresh";
-          structmams -> "Viswanath Suresh";
+               structmssri -> structmss:mss;
+               structmssri -> "Annapoorna Bai";
+               structmssri -> "Jayalakshmi";
+               structmssri -> "Uma";
+               structmssri -> "Prabha";
 
-          structcha ->"Nitish S P";
+               node [shape=record, color=Skyblue];
+               edge [shape=record, color=Skyblue];
 
-          structjay -> "Prajwal Y P";
+               structmvnappa [label="<vnappa> Venkatanarayanappa | <jank> Jankamma"];
 
-          structpoor -> "Sneha";
-     #}
+               structmvnappa -> structmss:tks;
 
-     # Wife's Dad's family
-     #subgraph cluster_3 {
+               structmss -> structar:arr;
+               structmss -> structmams:mts;
+               structmss -> structnts:nts;
+               structmss -> structcha:cts;
+               structmss -> structjay:jts;
+               structmss -> structpoor:pts;
 
-          node [shape=record, color=Orange];
-          edge [shape=record, color=Orange];
+               structar -> "Santosh P";
+               structar -> "Sapna P";
 
-          structsmur [label="<smur> Sridhar Murthy | <raj> Rajini"];
+               structmams -> "Rashmi Suresh";
+               structmams -> "Gayatri Suresh";
+               structmams -> "Viswanath Suresh";
 
-          structvp [label="<vkp> Vikram Prasad | <mvp> Malathi Vikram"];
-          structvh [label="<vhe> Vasudev Hebbar | <sahh> Sahana Hebbar"];
-          structsh [label="<srih> Srinivas Hathwar | <bhaha> Bhavana Hathwar"];
-          structsr [label="<semr> Seema Raghavendra | <ragh> Raghavendra"];
+               structcha ->"Nitish S P";
 
-          structsmur -> structvp:vkp;
-          structsmur -> structvh:vhe;
-          structsmur -> structsh:bhaha;
-          structsmur -> structsr:semr;
+               structjay -> "Prajwal Y P";
 
-          structvh -> "Sinchana Hebbar";
-          structvh -> "Sudhanva Hebbar";
+               structpoor -> "Sneha";
+          #}
 
-          structsh -> "Surabhi Hathwar";
-          structsh -> "Shashwath Hathwar";
-     #}
+          # Wife's Dad's family
+          #subgraph cluster_3 {
 
-     # Wife's Mom's family
-     #subgraph cluster_4 {
+               node [shape=record, color=Orange];
+               edge [shape=record, color=Orange];
 
-          node [shape=record, color=Maroon];
-          edge [shape=record, color=Maroon   ];
+               structnar [label="<nachar> Narayan Achar | <padmavat> Padmavatamma"];
 
-          structpara [label="<parb> Parashuram Bhat | <lali> Lalithamma"];
+               structsmur [label="<smur> Sridhar Murthy | <raj> Rajini"];
 
-          structanp [label="<ananp> Anantha Padmanabha | <prabh> Prabha Padmanabha"];
-          structmee [label="<meen> Meena Krishnamurthy | <krish> Krishnamurthy"];
-          structvas [label="<vasa> Vasanthi Krishnamurthy | <kbhat> Krishnamurthy Bhat"];
-          structkal [label="<kala> Kala Shanadi | <mshanadi> Mahesh Shanadi"];
-          structsri [label="<srini> Srinivas"];
+               structvp [label="<vkp> Vikram Prasad | <mvp> Malathi Vikram"];
+               structvh [label="<vhe> Vasudev Hebbar | <sahh> Sahana Hebbar"];
+               structsh [label="<srih> Srinivas Hathwar | <bhaha> Bhavana Hathwar"];
+               structsr [label="<semr> Seema Raghavendra | <ragh> Raghavendra"];
 
-          structpara -> structvp:mvp;
-          structpara -> structanp:ananp;
-          structpara -> structmee:meen;
-          structpara -> structvas:vasa;
-          structpara -> structkal:kala;
-          structpara -> structsri:srini;
+               structnar -> structsmur:smur;
 
-          structanp -> "Divya Padmanabha";
-          structanp -> "Shruti Padmanabha";
-         
+               structsmur -> structvp:vkp;
+               structsmur -> structvh:vhe;
+               structsmur -> structsh:bhaha;
+               structsmur -> structsr:semr;
 
-          structmee -> "Abhishek Krishnamurthy";
-         
-          structvas -> "Shilpa Bhat";
-          structvas -> "Aditya Bhat";
+               structvh -> "Sinchana Hebbar";
+               structvh -> "Sudhanva Hebbar";
 
-          structkal -> "Gokul Shanadi";
-          structkal -> "Lakshmi Shanadi";
+               structsh -> "Surabhi Hathwar";
+               structsh -> "Shashwath Hathwar";
+          #}
 
-     #}
+          # Wife's Mom's family
+          #subgraph cluster_4 {
+
+               node [shape=record, color=Maroon];
+               edge [shape=record, color=Maroon   ];
+
+               structsrinib [label="<srinib> Srinivas Bhat | <raja> Rajamma"];
+
+               structpara [label="<parb> Parashuram Bhat | <lali> Lalithamma"];
+
+               structanp [label="<ananp> Anantha Padmanabha | <prabh> Prabha Padmanabha"];
+               structmee [label="<meen> Meena Krishnamurthy | <krish> Krishnamurthy"];
+               structvas [label="<vasa> Vasanthi Krishnamurthy | <kbhat> Krishnamurthy Bhat"];
+               structkal [label="<kala> Kala Shanadi | <mshanadi> Mahesh Shanadi"];
+               structsri [label="<srini> Srinivas"];
+
+               node [shape=record, color=Red];
+               edge [shape=record, color=Red];
+
+               structramtan [label="<rtant> Ramakrishna Tantri | <bagr> Bagirathi"];
+               structramtan -> structpara:lali;
+
+               node [shape=record, color=Maroon];
+               edge [shape=record, color=Maroon];
+
+               structsrinib -> structpara:parb;
+
+               structpara -> structvp:mvp;
+               structpara -> structanp:ananp;
+               structpara -> structmee:meen;
+               structpara -> structvas:vasa;
+               structpara -> structkal:kala;
+               structpara -> structsri:srini;
+
+               structanp -> "Divya Padmanabha";
+               structanp -> "Shruti Padmanabha";
+              
+
+               structmee -> "Abhishek Krishnamurthy";
+              
+               structvas -> "Shilpa Bhat";
+               structvas -> "Aditya Bhat";
+
+               structkal -> "Gokul Shanadi";
+               structkal -> "Lakshmi Shanadi";
+
+          #}
+     }
 
  }
